@@ -38,7 +38,6 @@ import static Entities.Generate.*;
 
 public class UITestCases {
     WebDriver driver;
-    int i=0;
 
     @BeforeSuite
     public void beforeSuite() {
