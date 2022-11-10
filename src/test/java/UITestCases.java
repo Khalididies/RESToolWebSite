@@ -47,7 +47,6 @@ public class UITestCases {
 
     @BeforeMethod
     public void BeforeTest() {
-
         driver.get(Environment.URL.getUrl());
     }
 
