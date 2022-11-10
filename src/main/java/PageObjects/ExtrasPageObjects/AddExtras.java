@@ -1,5 +1,6 @@
 package PageObjects.ExtrasPageObjects;
 
+import Entities.ExtrasXpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,9 +15,9 @@ public class AddExtras extends Extras{
         super(driver);
         this.driver=driver;
 
-        Name = driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[1]/input"));
+        Name = driver.findElement(By.xpath(ExtrasXpath.AddNameXpath));
 
-        Submit = driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[2]/button"));
+        Submit = driver.findElement(By.xpath(ExtrasXpath.AddSubmitXpath));
     }
 
     public void fillInNewExtras(String name) {

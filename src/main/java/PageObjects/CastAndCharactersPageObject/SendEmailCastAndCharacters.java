@@ -1,5 +1,6 @@
 package PageObjects.CastAndCharactersPageObject;
 
+import Entities.CharactersXpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,10 +15,10 @@ public class SendEmailCastAndCharacters extends CastAndCharacters{
         super(driver);
         this.driver=driver;
 
-        EmailTitle= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[2]/input"));
-        EmailBody= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[3]/input"));
+        EmailTitle= driver.findElement(By.xpath(CharactersXpath.SendEmailEmailTitleXpath));
+        EmailBody= driver.findElement(By.xpath(CharactersXpath.SendEmailEmailBodyXpath));
 
-        Submit= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[4]/button"));
+        Submit= driver.findElement(By.xpath(CharactersXpath.SendEmailSubmitXpath));
 
     }
     public void fillInEmail(String emailTitle, String emailBody){
@@ -30,7 +31,7 @@ public class SendEmailCastAndCharacters extends CastAndCharacters{
     }
 
     public String getAlertMessage(){
-        WebElement AlertMessage= driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]"));
+        WebElement AlertMessage= driver.findElement(By.xpath(CharactersXpath.SendEmailAlertMessageXpath));
 
         return AlertMessage.getText();
     }

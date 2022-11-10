@@ -1,6 +1,6 @@
 package PageObjects.ExtrasPageObjects;
 
-import PageObjects.DeadsPageObjects.Deads;
+import Entities.ExtrasXpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,9 +13,9 @@ public class EditExtras extends Extras {
         super(driver);
         this.driver=driver;
 
-        Name= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[1]/input"));
+        Name= driver.findElement(By.xpath(ExtrasXpath.EditNameXpath));
 
-        Submit= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[2]/button"));
+        Submit= driver.findElement(By.xpath(ExtrasXpath.EditSubmitXpath));
     }
     public void fillInUpdate(String name){
         Name.click();

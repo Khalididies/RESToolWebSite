@@ -1,5 +1,6 @@
 package PageObjects.CastAndCharactersPageObject;
 
+import Entities.CharactersXpath;
 import PageObjects.MainMenu;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,30 +16,28 @@ public class CastAndCharacters extends MainMenu {
     WebElement RealName;
     WebElement Location;
     WebElement Alive;
-
     WebElement Add;
     WebElement Edit;
     WebElement Disable;
     WebElement SendEmail;
-
     WebElement Delete;
 
     public CastAndCharacters(WebDriver driver) {
         super(driver);
         this.driver=driver;
-                                                       //*[@id="root"]/div/div[1]/main/div/div/div[1]/div[2]/span
-        ID = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/div/div/div[2]/span"));
-        Name = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/div/div/div[3]/span"));
-        RealName = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/div/div/div[4]/span"));
-        Location =  driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/div/div/div[5]/span"));
-        Alive = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/div/div/div[6]/div"));
 
-        Add = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/header/button"));
+        ID = driver.findElement(By.xpath(CharactersXpath.IdXpath));
+        Name = driver.findElement(By.xpath(CharactersXpath.NameXpath));
+        RealName = driver.findElement(By.xpath(CharactersXpath.RealNameXpath));
+        Location =  driver.findElement(By.xpath(CharactersXpath.LocationXpath));
+        Alive = driver.findElement(By.xpath(CharactersXpath.AliveXpath));
 
-        Edit = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/div/div/div[7]/button[1]"));
-        SendEmail = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/div/div/div[7]/button[2]"));
-        Disable =  driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/div/div/div[7]/button[3]"));
-        Delete = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/div/div/div[7]/button[4]"));
+        Add = driver.findElement(By.xpath(CharactersXpath.AddXpath));
+
+        Edit = driver.findElement(By.xpath(CharactersXpath.EditXpath));
+        SendEmail = driver.findElement(By.xpath(CharactersXpath.SendEmailXpath));
+        Disable =  driver.findElement(By.xpath(CharactersXpath.DisableXpath));
+        Delete = driver.findElement(By.xpath(CharactersXpath.DeleteXpath));
     }
     public ArrayList<String> GetCharacter() {
         Character.add(ID.getText());

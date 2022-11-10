@@ -1,5 +1,6 @@
 package PageObjects.EmployeesPageObjects;
 
+import Entities.EmployeesXpath;
 import PageObjects.MainMenu;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,14 +23,14 @@ public class Employees extends MainMenu {
     public Employees(WebDriver driver) {
         super(driver);
         this.driver =driver;
-        ID = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr/td[1]/span"));
-        Name = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr/td[2]/span"));
-        JobTitle = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr/td[3]/span"));
-        Fired = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr/td[4]/div"));
+        ID = driver.findElement(By.xpath(EmployeesXpath.IDXpath));
+        Name = driver.findElement(By.xpath(EmployeesXpath.NameXpath));
+        JobTitle = driver.findElement(By.xpath(EmployeesXpath.JobTitleXpath));
+        Fired = driver.findElement(By.xpath(EmployeesXpath.FiredXpath));
 
-        Add = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/header/button"));
-        Edit = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr/td[5]/div/button[1]"));
-        Delete = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr/td[5]/div/button[2]"));
+        Add = driver.findElement(By.xpath(EmployeesXpath.AddXpath));
+        Edit = driver.findElement(By.xpath(EmployeesXpath.EditXpath));
+        Delete = driver.findElement(By.xpath(EmployeesXpath.DeleteXpath));
     }
     public ArrayList<String> GetEmployee() {
         Employee.add(ID.getText());

@@ -31,9 +31,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-
 import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import static Entities.Generate.*;
@@ -42,15 +40,20 @@ public class UITestCases {
     WebDriver driver;
     int i=0;
 
-    @BeforeMethod
-    public void BeforeTest() {
+    @BeforeSuite
+    public void beforeSuite() {
         driver = OpenBrowsers.openBrowser("chrome");
         driver.manage().window().maximize();
+    }
+
+    @BeforeMethod
+    public void BeforeTest() {
+
         driver.get(Environment.URL.getUrl());
     }
 
     @Test()
-    public void addCastAndCharacters() throws InterruptedException, IOException {
+    public void addCastAndCharacters() throws InterruptedException {
         MainMenu mainMenu = new MainMenu(driver);
         mainMenu.pressMenuItem("Cast & Characters");
         Thread.sleep(2000);
@@ -503,8 +506,8 @@ public class UITestCases {
         Assert.assertEquals(IsEmpty,true);
     }
 
-    @AfterMethod
-    public void AfterTest() throws InterruptedException {
+    @AfterSuite
+    public void AfterSuite() throws InterruptedException {
         Thread.sleep(1000);
         driver.close();
     }

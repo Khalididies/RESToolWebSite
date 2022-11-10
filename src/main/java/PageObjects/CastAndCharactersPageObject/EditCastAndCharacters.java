@@ -1,5 +1,6 @@
 package PageObjects.CastAndCharactersPageObject;
 
+import Entities.CharactersXpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,11 +15,11 @@ public class EditCastAndCharacters extends CastAndCharacters{
         super(driver);
         this.driver=driver;
 
-        NumberTest= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[1]/input"));
-        Location= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[1]/input"));
-        Alive= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[1]/input"));
+        NumberTest= driver.findElement(By.xpath(CharactersXpath.EditNumberTestXpath));
+        Location= driver.findElement(By.xpath(CharactersXpath.EditLocationXpath));
+        Alive= driver.findElement(By.xpath(CharactersXpath.EditIsAliveXpath));
 
-        Submit= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[4]/button"));
+        Submit= driver.findElement(By.xpath(CharactersXpath.EditSubmitXpath));
 
     }
     public void fillInUpdate(String numberTest, String location, boolean isAlive){

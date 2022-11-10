@@ -1,5 +1,6 @@
 package PageObjects.DeadsPageObjects;
 
+import Entities.DeadsXpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,10 +15,10 @@ public class AddDeads extends Deads{
         super(driver);
         this.driver=driver;
 
-        Name = driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[1]/input"));
-        Reason = driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[2]/input"));
+        Name = driver.findElement(By.xpath(DeadsXpath.AddNameXpath));
+        Reason = driver.findElement(By.xpath(DeadsXpath.AddReasonXpath));
 
-        Submit = driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[3]/button"));
+        Submit = driver.findElement(By.xpath(DeadsXpath.AddSubmitXpath));
     }
 
     public void fillInNewDeads(String name, String reason) {

@@ -1,7 +1,6 @@
 package Entities;
 
 import java.util.Random;
-import java.util.UUID;
 
 public class Generate {
     private static Generate instance;

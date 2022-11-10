@@ -1,5 +1,6 @@
 package PageObjects.ExtrasPageObjects;
 
+import Entities.ExtrasXpath;
 import PageObjects.MainMenu;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,12 +19,12 @@ public class Extras extends MainMenu {
     public Extras(WebDriver driver) {
         super(driver);
         this.driver =driver;
-        ID = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr[1]/td[1]/span"));
-        Name = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr[1]/td[2]/span"));
+        ID = driver.findElement(By.xpath(ExtrasXpath.IDXpath));
+        Name = driver.findElement(By.xpath(ExtrasXpath.NameXpath));
 
-        Add = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/header/button"));
-        Edit = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr[1]/td[3]/div/button[1]"));
-        Delete = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr[1]/td[3]/div/button[2]"));
+        Add = driver.findElement(By.xpath(ExtrasXpath.AddXpath));
+        Edit = driver.findElement(By.xpath(ExtrasXpath.EditXpath));
+        Delete = driver.findElement(By.xpath(ExtrasXpath.DeleteXpath));
     }
 
     public ArrayList<String> GetExtra() {

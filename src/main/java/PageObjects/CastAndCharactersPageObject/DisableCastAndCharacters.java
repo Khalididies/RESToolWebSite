@@ -1,5 +1,6 @@
 package PageObjects.CastAndCharactersPageObject;
 
+import Entities.CharactersXpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +14,7 @@ public class DisableCastAndCharacters extends CastAndCharacters {
         super(driver);
         this.driver = driver;
 
-        Submit = driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[2]/button"));
+        Submit = driver.findElement(By.xpath(CharactersXpath.DisableSubmitXpath));
     }
 
     public void clickSubmit() {
@@ -21,7 +22,7 @@ public class DisableCastAndCharacters extends CastAndCharacters {
     }
 
     public String getAlertMessage(){
-        WebElement AlertMessage= driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]"));
+        WebElement AlertMessage= driver.findElement(By.xpath(CharactersXpath.AlertMessageXpath));
 
         return AlertMessage.getText();
     }

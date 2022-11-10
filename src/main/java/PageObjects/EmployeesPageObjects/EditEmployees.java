@@ -1,5 +1,6 @@
 package PageObjects.EmployeesPageObjects;
 
+import Entities.EmployeesXpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,11 +15,11 @@ public class EditEmployees extends Employees{
         super(driver);
         this.driver=driver;
 
-        Name= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[1]/input"));
-        JobTitle= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[2]/select"));
-        Fired= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[3]/input"));
+        Name= driver.findElement(By.xpath(EmployeesXpath.EditNameXpath));
+        JobTitle= driver.findElement(By.xpath(EmployeesXpath.EditJobTitleXpath));
+        Fired= driver.findElement(By.xpath(EmployeesXpath.EditFiredXpath));
 
-        Submit= driver.findElement(By.xpath("//*[@id=\"popup-portal\"]/div/div/div[2]/section/form/div[4]/button"));
+        Submit= driver.findElement(By.xpath(EmployeesXpath.EditSubmitXpath));
 
     }
     public void fillInUpdate(String name, String jobTitle, boolean isFired){

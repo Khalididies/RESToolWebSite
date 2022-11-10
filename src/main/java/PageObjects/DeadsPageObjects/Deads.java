@@ -1,5 +1,6 @@
 package PageObjects.DeadsPageObjects;
 
+import Entities.DeadsXpath;
 import PageObjects.MainMenu;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,13 +20,13 @@ public class Deads extends MainMenu {
     public Deads(WebDriver driver) {
         super(driver);
         this.driver =driver;
-        ID = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr[1]/td[1]/span"));
-        Name = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr/td[2]/span"));
-        DeadReason = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr/td[3]/span"));
+        ID = driver.findElement(By.xpath(DeadsXpath.IDXpath));
+        Name = driver.findElement(By.xpath(DeadsXpath.NameXpath));
+        DeadReason = driver.findElement(By.xpath(DeadsXpath.DeadReasonXpath));
 
-        Add = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/header/button"));
-        Edit = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr[1]/td[4]/div/button[1]"));
-        Delete = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div/table/tbody/tr[1]/td[4]/div/button[2]"));
+        Add = driver.findElement(By.xpath(DeadsXpath.AddXpath));
+        Edit = driver.findElement(By.xpath(DeadsXpath.EditXpath));
+        Delete = driver.findElement(By.xpath(DeadsXpath.DeleteXpath));
     }
 
     public ArrayList<String> GetDead() {

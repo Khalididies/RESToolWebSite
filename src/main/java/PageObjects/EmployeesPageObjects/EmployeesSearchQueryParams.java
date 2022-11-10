@@ -1,5 +1,6 @@
 package PageObjects.EmployeesPageObjects;
 
+import Entities.EmployeesXpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,10 +14,10 @@ public class EmployeesSearchQueryParams{
 
     public EmployeesSearchQueryParams(WebDriver driver) {
         this.driver=driver;
-        Search = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/section/form/div[1]/input"));
-        Page = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/section/form/div[2]/input"));
-        Limit = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/section/form/div[3]/input"));
-        Submit = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/section/form/button"));
+        Search = driver.findElement(By.xpath(EmployeesXpath.SearchQueryParamsSearchXpath));
+        Page = driver.findElement(By.xpath(EmployeesXpath.SearchQueryParamsPageXpath));
+        Limit = driver.findElement(By.xpath(EmployeesXpath.SearchQueryParamsLimitXpath));
+        Submit = driver.findElement(By.xpath(EmployeesXpath.SearchQueryParamsSubmitXpath));
     }
 
     public void fillInSearch(String Name) {
