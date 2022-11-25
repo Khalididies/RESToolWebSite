@@ -1,5 +1,6 @@
 package PageObjects;
 
+import Entities.MainXpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,7 +22,7 @@ public class MainMenu {
 
 	public boolean CheckIfEmpty(){
 		try {
-			IsEmpty =driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/main/div"));
+			IsEmpty =driver.findElement(By.xpath(MainXpath.IsEmptyXpath));
 			return  true;
 		}catch (Error error){
 			return false;
