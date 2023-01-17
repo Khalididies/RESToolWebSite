@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class DeadsAPI {
     private static DeadsAPI instance;
-    private static String API_ADDRESS = "https://restool-sample-app.herokuapp.com/api";
+    private static String API_ADDRESS = "http://localhost:3000/api";
 
     public static DeadsAPI getInstance() {
         if (instance == null) {

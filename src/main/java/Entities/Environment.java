@@ -1,7 +1,7 @@
 package Entities;
 
 public enum Environment {
-    URL("https://dsternlicht.github.io/RESTool");
+    URL("http://localhost:3001");
 
     private String url;
 

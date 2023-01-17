@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class EmployeesAPI {
     private static EmployeesAPI instance;
-    private static String API_ADDRESS = "https://restool-sample-app.herokuapp.com/api";
+    private static String API_ADDRESS = "http://localhost:3000/api";
 
     public static EmployeesAPI getInstance() {
         if (instance == null) {

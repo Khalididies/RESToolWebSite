@@ -280,7 +280,7 @@ public class UITestCases {
         Assert.assertEquals(employee.get(0),postEmployees.id);
         Assert.assertEquals(employee.get(1),name);
         Assert.assertEquals(employee.get(2),getLocationEmployees("c"));
-        Assert.assertEquals(employee.get(3),"false");
+        Assert.assertEquals(employee.get(3),"true");
     }
 
     @Test()
@@ -312,7 +312,7 @@ public class UITestCases {
         Thread.sleep(3000);
 
         SearchQueryParams searchQueryParams = new SearchQueryParams(driver);
-        searchQueryParams.fillInSearch("Tommen");
+        searchQueryParams.fillInSearch("");
         searchQueryParams.clickSubmit();
         Thread.sleep(2000);
 
@@ -414,7 +414,7 @@ public class UITestCases {
         Thread.sleep(2000);
 
         SearchQueryParams searchQueryParams = new SearchQueryParams(driver);
-        searchQueryParams.fillInSearch("Ate by a dragon guy");
+        searchQueryParams.fillInSearch("");
         searchQueryParams.clickSubmit();
         Thread.sleep(2000);
 

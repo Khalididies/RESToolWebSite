@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class CharacterAPI {
     private static CharacterAPI instance;
-    private static String API_ADDRESS = "https://restool-sample-app.herokuapp.com/api";
+    private static String API_ADDRESS = "http://localhost:3000/api";
 
     public static CharacterAPI getInstance() {
         if (instance == null) {

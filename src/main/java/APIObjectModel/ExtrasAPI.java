@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class ExtrasAPI {
     private static ExtrasAPI instance;
-    private static String API_ADDRESS = "https://restool-sample-app.herokuapp.com/api";
+    private static String API_ADDRESS = "http://localhost:3000/api";
 
     public static ExtrasAPI getInstance() {
         if (instance == null) {
